@@ -1,4 +1,4 @@
 web:
 gunicorn
-app:app.wsgi
+app:app
 
