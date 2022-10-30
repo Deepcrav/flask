@@ -33,7 +33,7 @@ def chart1():
                linewidth=2, ticks='outside', 
                tickfont=dict(family='Arial', size=12, color='rgb(82,82,82)')),
     yaxis=dict(showgrid=False, zeroline=False, showline=True, showticklabels=False), autosize=False,
-    width=1600,
+    width=1000,
     height=600,
     margin=dict(autoexpand=False, l=100, r=20, t=110), showlegend=False, plot_bgcolor='light green')
 
@@ -59,7 +59,7 @@ def chart2():
     df_europe = px.data.gapminder().query("continent=='Europe' and year==2007 and pop>2.e6")
     fig = px.bar(df_europe, x='country', y='pop', text='pop', color='country')
     fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
-    fig.update_layout(width=1600, height=600)
+    fig.update_layout(width=1000, height=600)
     fig.update_layout(uniformtext_minsize=20)
     fig.update_layout(xaxis_tickangle=-45)
     fig
@@ -119,7 +119,7 @@ def chart4():
     fig.add_trace(go.Violin(x=df_tips['day'][df_tips['smoker']=='No'],
                         y=df_tips['total_bill'][df_tips['smoker']=='No'],
                         legendgroup='Yes', scalegroup='Yes', name='No',side='positive', line_color='red'))
-    fig.update_layout(width=1600, height=600)
+    fig.update_layout(width=1000, height=600)
 
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     header="Tips Box plot"
@@ -134,7 +134,7 @@ def chart5():
     flights = sns.load_dataset('flights')
     fig = px.scatter_3d(flights, x='year', y='month', z='passengers', color='year', opacity=0.7, animation_frame="year")
     fig
-    fig.update_layout(width=1600, height=900)
+    fig.update_layout(width=1000, height=900)
 
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     header="3D Plot"
@@ -149,7 +149,7 @@ def chart6():
     df_wind = px.data.wind()
     fig = px.line_polar(df_wind, r = 'frequency', theta='direction', color='strength', line_close=True, template="ggplot2")
     fig
-    fig.update_layout(width=1600, height=900)
+    fig.update_layout(width=1000, height=600)
 
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     header="Polar Graph"
@@ -187,7 +187,7 @@ def chart7():
         'mode' : "number+delta+gauge",
         'delta' : {'reference': 90}}]
                          }})
-    fig.update_layout(width=1000, height=800)
+    fig.update_layout(width=1000, height=600)
 
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     header="Indicators"
