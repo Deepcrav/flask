@@ -94,7 +94,7 @@ def chart3():
                     yaxis=dict(gridcolor='rgb(255,255,255)',
                             gridwidth=3),
                     paper_bgcolor='rgb(243,243,243)',
-                    plot_bgcolor='rgb(243,243,243)',width=1600, height=600)
+                    plot_bgcolor='rgb(243,243,243)',width=1000, height=600)
 
 
     graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
