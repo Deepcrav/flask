@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('template/index.html')
+    return render_template('index.html')
 
 @app.route('/chart1')
 def chart1():
@@ -42,7 +42,7 @@ def chart1():
     description = """
     The graph shows Amazon, Apple and Google stock prize comparison.
     """
-    return render_template('template/notdash2.html', graphJSON=graphJSON, header=header,description=description)
+    return render_template('notdash2.html', graphJSON=graphJSON, header=header,description=description)
 
 @app.route('/chart2')
 def chart2():
@@ -71,7 +71,7 @@ def chart2():
     The rumor that vegetarians are having a hard time in London and Madrid can probably not be
     explained by this chart.
     """
-    return render_template('template/notdash2.html', graphJSON=graphJSON, header=header,description=description)
+    return render_template('notdash2.html', graphJSON=graphJSON, header=header,description=description)
 
 
 @app.route('/chart3')
@@ -102,7 +102,7 @@ def chart3():
     description = """
     This graph shows analysis of tips given by customers
     """
-    return render_template('template/notdash2.html', graphJSON=graphJSON, header=header,description=description)
+    return render_template('notdash2.html', graphJSON=graphJSON, header=header,description=description)
 
 
 @app.route('/chart4')
@@ -126,7 +126,7 @@ def chart4():
     description = """
     This graph shows analysis of tips given by customers
     """
-    return render_template('template/notdash2.html', graphJSON=graphJSON, header=header,description=description)
+    return render_template('notdash2.html', graphJSON=graphJSON, header=header,description=description)
 
 
 @app.route('/chart5')
@@ -141,7 +141,7 @@ def chart5():
     description = """
     This graph shows analysis of tips given by customers
     """
-    return render_template('template/notdash2.html', graphJSON=graphJSON, header=header,description=description)
+    return render_template('notdash2.html', graphJSON=graphJSON, header=header,description=description)
 
 
 @app.route('/chart6')
@@ -156,7 +156,7 @@ def chart6():
     description = """
     This graph shows analysis of tips given by customers
     """
-    return render_template('template/notdash2.html', graphJSON=graphJSON, header=header,description=description)
+    return render_template('notdash2.html', graphJSON=graphJSON, header=header,description=description)
 
 
 @app.route('/chart7')
@@ -194,7 +194,7 @@ def chart7():
     description = """
     This graph shows analysis of tips given by customers
     """
-    return render_template('template/notdash2.html', graphJSON=graphJSON, header=header,description=description)
+    return render_template('notdash2.html', graphJSON=graphJSON, header=header,description=description)
 
 if __name__ == "__main__":
     app.run(debug=True)
